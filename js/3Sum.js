@@ -1,5 +1,6 @@
 /**
  * Created by raiden on 16/9/1.
+ * leetcode对函数性能要求较高,如果不做充分优化,会导致执行时间超出其限定从而失败
  */
 
 /**
@@ -12,7 +13,7 @@ var threeSum = function(nums) {
     var l = nums.length;
     var i,j,k = 0;
     var tmpR = 0; //中间求和值
-    var tmp = []; 
+    var tmp = [];
     var tmpStr = '';
 
     nums = nums.sort();
@@ -20,7 +21,7 @@ var threeSum = function(nums) {
     if(l>=3){
         for(i=0; i<l-2; i++){
             for(j=i+1; j<l-1; j++){
-                tmpR = nums[i]+nums[j];
+                tmpR = nums[i]+nums[j]; //缓存前两个数的计算结果
                 for(k=j+1;k<l; k++){
                     if(tmpR+nums[k]==0){
                         tmp = [nums[i],nums[j],nums[k]];

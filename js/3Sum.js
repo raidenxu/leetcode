@@ -8,11 +8,11 @@
  */
 var threeSum = function(nums) {
     var rst = [];
-    var rstTag = {};
+    var rstTag = {}; //数据标记Map
     var l = nums.length;
     var i,j,k = 0;
-    var tmpR = 0;
-    var tmp = [];
+    var tmpR = 0; //中间求和值
+    var tmp = []; 
     var tmpStr = '';
 
     nums = nums.sort();
